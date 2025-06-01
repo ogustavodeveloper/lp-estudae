@@ -302,7 +302,7 @@ export default function EstudaeLanding() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Estudaê. Feito com ❤️ por um estudante para estudantes.</p>
+            <p>&copy; 2025 Estudaê. Feito com ❤️ por um estudante para estudantes.</p>
           </div>
         </div>
       </footer>
