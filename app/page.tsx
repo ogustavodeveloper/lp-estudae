@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, PenTool, BookOpen, Brain, Star, ArrowRight } from "lucide-react"
-import Image from "next/image"
 
 export default function EstudaeLanding() {
   const handleCheckout = () => {
@@ -27,7 +26,9 @@ export default function EstudaeLanding() {
       <header className="border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image src="/logo-estudae.png" alt="Logo Estudaê" width={32} height={32} className="rounded-lg" />
+            <div className="w-8 h-8 bg-[#0dff00] rounded-lg flex items-center justify-center">
+              <span className="text-black font-bold text-lg">E</span>
+            </div>
             <span className="text-xl font-bold text-gray-900">Estudaê</span>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -76,16 +77,6 @@ export default function EstudaeLanding() {
               <CheckCircle className="w-5 h-5 text-[#0dff00] mr-2" />
               Sem cartão de crédito • Pix ou cartão
             </div>
-          </div>
-
-          <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto">
-            <Image
-              src="/placeholder.svg?height=300&width=500"
-              alt="Interface do Estudaê"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-lg mx-auto"
-            />
           </div>
         </div>
       </section>
@@ -291,7 +282,9 @@ export default function EstudaeLanding() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Image src="/logo-estudae.png" alt="Logo Estudaê" width={32} height={32} className="rounded-lg" />
+              <div className="w-8 h-8 bg-[#0dff00] rounded-lg flex items-center justify-center">
+                <span className="text-black font-bold text-lg">E</span>
+              </div>
               <span className="text-xl font-bold">Estudaê</span>
             </div>
 
