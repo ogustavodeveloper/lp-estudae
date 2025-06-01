@@ -1,14 +1,24 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, PenTool, BookOpen, Brain, Star, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 export default function EstudaeLanding() {
+  const handleCheckout = () => {
+    // Substitua pela URL do seu checkout real
+    window.open("https://checkout.estudae.com.br", "_blank")
+  }
+
   return (
     <div className="min-h-screen bg-white font-inter">
       {/* Fixed CTA Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-6 py-3 rounded-full shadow-lg animate-pulse">
+        <Button
+          onClick={handleCheckout}
+          className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-6 py-3 rounded-full shadow-lg animate-pulse"
+        >
           Assinar agora por R$5
         </Button>
       </div>
@@ -17,9 +27,7 @@ export default function EstudaeLanding() {
       <header className="border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-sm z-40">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-[#0dff00] rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">E</span>
-            </div>
+            <Image src="/logo-estudae.png" alt="Logo Estudaê" width={32} height={32} className="rounded-lg" />
             <span className="text-xl font-bold text-gray-900">Estudaê</span>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -33,7 +41,9 @@ export default function EstudaeLanding() {
               Sobre
             </a>
           </nav>
-          <Button className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-semibold">Começar agora</Button>
+          <Button onClick={handleCheckout} className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-semibold">
+            Começar agora
+          </Button>
         </div>
       </header>
 
@@ -55,7 +65,10 @@ export default function EstudaeLanding() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-8 py-4 text-lg">
+            <Button
+              onClick={handleCheckout}
+              className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-8 py-4 text-lg"
+            >
               Começar por R$5/mês
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -235,7 +248,10 @@ export default function EstudaeLanding() {
                   </li>
                 </ul>
 
-                <Button className="w-full bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold py-4 text-lg">
+                <Button
+                  onClick={handleCheckout}
+                  className="w-full bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold py-4 text-lg"
+                >
                   Assinar por R$5/mês
                 </Button>
 
@@ -258,7 +274,10 @@ export default function EstudaeLanding() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="bg-black hover:bg-black/90 text-white font-bold px-8 py-4 text-lg">
+            <Button
+              onClick={handleCheckout}
+              className="bg-black hover:bg-black/90 text-white font-bold px-8 py-4 text-lg"
+            >
               Começar agora por R$5
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -272,9 +291,7 @@ export default function EstudaeLanding() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-[#0dff00] rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-lg">E</span>
-              </div>
+              <Image src="/logo-estudae.png" alt="Logo Estudaê" width={32} height={32} className="rounded-lg" />
               <span className="text-xl font-bold">Estudaê</span>
             </div>
 
