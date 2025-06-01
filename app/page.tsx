@@ -92,7 +92,7 @@ export default function EstudaeLanding() {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Oi, eu sou o Gustavo!</h2>
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              "Sou Gustavo, tô no 3º ano como você, e criei o Estudaê porque também quero passar no ENEM. Sei como é
+              "Sou Gustavo, tô no 3º ano do ensino médio, e criei o Estudaê porque também quero passar no ENEM. Sei como é
               difícil estudar sozinho e ter que pagar caro por cursinhos. Por isso criei uma plataforma que realmente
               funciona e cabe no seu bolso."
             </p>
@@ -272,7 +272,7 @@ export default function EstudaeLanding() {
               Começar agora por R$5
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <p className="text-black/70">✨ Primeira semana grátis para testar</p>
+            
           </div>
         </div>
       </section>
