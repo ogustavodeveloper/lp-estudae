@@ -9,7 +9,7 @@ export default function EstudaeLanding() {
     // Substitua pelo seu número do WhatsApp (formato: 5511999999999)
     const phoneNumber = "5575999948629"
     const message = "Oi! Vi a landing page do Estudaê e quero saber mais sobre a plataforma. Pode me ajudar?"
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/5575999948629?text=Oii!%20Quero%20saber%20mais%20sobre%20o%20Estuda%C3%AA!`
     window.open(whatsappUrl, "_blank")
   }
 
