@@ -2,12 +2,15 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, PenTool, BookOpen, Brain, Star, ArrowRight } from "lucide-react"
+import { CheckCircle, PenTool, BookOpen, Brain, Star, ArrowRight, MessageCircle } from "lucide-react"
 
 export default function EstudaeLanding() {
-  const handleCheckout = () => {
-    // Substitua pela URL do seu checkout real
-    window.open("https://checkout.estudae.com.br", "_blank")
+  const handleWhatsApp = () => {
+    // Substitua pelo seu número do WhatsApp (formato: 5511999999999)
+    const phoneNumber = "5575999948629"
+    const message = "Oi! Vi a landing page do Estudaê e quero saber mais sobre a plataforma. Pode me ajudar?"
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, "_blank")
   }
 
   return (
@@ -15,10 +18,11 @@ export default function EstudaeLanding() {
       {/* Fixed CTA Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
-          onClick={handleCheckout}
-          className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-6 py-3 rounded-full shadow-lg animate-pulse"
+          onClick={handleWhatsApp}
+          className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-6 py-3 rounded-full shadow-lg animate-pulse flex items-center gap-2"
         >
-          Assinar agora por R$5
+          <MessageCircle className="w-5 h-5" />
+          Falar no WhatsApp
         </Button>
       </div>
 
@@ -42,8 +46,12 @@ export default function EstudaeLanding() {
               Sobre
             </a>
           </nav>
-          <Button onClick={handleCheckout} className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-semibold">
-            Começar agora
+          <Button
+            onClick={handleWhatsApp}
+            className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-semibold flex items-center gap-2"
+          >
+            <MessageCircle className="w-4 h-4" />
+            Falar comigo
           </Button>
         </div>
       </header>
@@ -67,10 +75,11 @@ export default function EstudaeLanding() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
-              onClick={handleCheckout}
-              className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-8 py-4 text-lg"
+              onClick={handleWhatsApp}
+              className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold px-8 py-4 text-lg flex items-center gap-2"
             >
-              Começar por R$5/mês
+              <MessageCircle className="w-5 h-5" />
+              Quero conhecer por R$5/mês
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <div className="flex items-center text-gray-600">
@@ -92,13 +101,20 @@ export default function EstudaeLanding() {
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Oi, eu sou o Gustavo!</h2>
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              "Sou Gustavo, tô no 3º ano do ensino médio, e criei o Estudaê porque também quero passar no ENEM. Sei como é
-              difícil estudar sozinho e ter que pagar caro por cursinhos. Por isso criei uma plataforma que realmente
+              "Sou Gustavo, tô no 3º ano do ensino médio, e criei o Estudaê porque também quero passar no ENEM. Sei como
+              é difícil estudar sozinho e ter que pagar caro por cursinhos. Por isso criei uma plataforma que realmente
               funciona e cabe no seu bolso."
             </p>
-            <div className="bg-white rounded-lg p-6 inline-block">
+            <div className="bg-white rounded-lg p-6 inline-block mb-6">
               <p className="text-gray-600 font-medium">Estudante do 3º ano da rede pública • Criador do Estudaê</p>
             </div>
+            <Button
+              onClick={handleWhatsApp}
+              className="bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-semibold flex items-center gap-2 mx-auto"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Conversar com o Gustavo
+            </Button>
           </div>
         </div>
       </section>
@@ -240,10 +256,11 @@ export default function EstudaeLanding() {
                 </ul>
 
                 <Button
-                  onClick={handleCheckout}
-                  className="w-full bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold py-4 text-lg"
+                  onClick={handleWhatsApp}
+                  className="w-full bg-[#0dff00] hover:bg-[#0dff00]/90 text-black font-bold py-4 text-lg flex items-center justify-center gap-2"
                 >
-                  Assinar por R$5/mês
+                  <MessageCircle className="w-5 h-5" />
+                  Quero assinar por R$5/mês
                 </Button>
 
                 <p className="text-sm text-gray-500 mt-4">
@@ -260,19 +277,20 @@ export default function EstudaeLanding() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Bora passar juntos por só 5 reais por mês?</h2>
           <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
-            Junte-se a centenas de estudantes que já estão usando o Estudaê para turbinar seus estudos e conquistar a
-            aprovação no ENEM!
+            Manda uma mensagem no WhatsApp que eu te explico tudo sobre a plataforma e como você pode começar hoje
+            mesmo!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={handleCheckout}
-              className="bg-black hover:bg-black/90 text-white font-bold px-8 py-4 text-lg"
+              onClick={handleWhatsApp}
+              className="bg-black hover:bg-black/90 text-white font-bold px-8 py-4 text-lg flex items-center gap-2"
             >
-              Começar agora por R$5
+              <MessageCircle className="w-5 h-5" />
+              Chamar no WhatsApp
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            
+            <p className="text-black/70">✨ Resposta rápida garantida!</p>
           </div>
         </div>
       </section>
@@ -295,9 +313,9 @@ export default function EstudaeLanding() {
               <a href="#" className="hover:text-[#0dff00] transition-colors">
                 Privacidade
               </a>
-              <a href="#" className="hover:text-[#0dff00] transition-colors">
+              <button onClick={handleWhatsApp} className="hover:text-[#0dff00] transition-colors">
                 Contato
-              </a>
+              </button>
             </div>
           </div>
 
